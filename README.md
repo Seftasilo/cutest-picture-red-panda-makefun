@@ -25,7 +25,8 @@ in the image.
 - `entry.png`: PNG 896x896, 924783 bytes (<= 1,048,576), magic bytes
   `89 50 4E 47`, SHA-256 `21a00d461ddfa1878564bc0a12056e6e1cb3c8e8d0367bb8ccbec6925acbf63b`.
 - `main.py` (stdlib only) run 2x writes byte-identical output equal to
-  `entry.png` (verified locally).
+  `entry.png` (verified locally). It also verifies the copy after writing
+  (PNG magic bytes + SHA-256 match) and exits non-zero on any mismatch.
 
 ## Files
 - `entry.png` — the entry image
